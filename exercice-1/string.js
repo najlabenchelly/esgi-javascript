@@ -1,10 +1,17 @@
 
-function ucFirst(str) {
-    if (str.length > 0) {
-        return str[0].toUpperCase() + str.substring(1);
+
+function ucFirst(string) {
+    if (string.length > 0) {
+        return string[0].toUpperCase() + string.substring(1);
     } else {
-        return str;
+        return string;
     }
+}
+
+function capitalize(string) {
+    return string.replace(/\w\S*/g, function(txt){
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
 }
 function capitalize(string) {
     return string[0].toUpperCase() + string.slice(1);
