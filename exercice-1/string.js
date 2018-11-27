@@ -64,12 +64,22 @@ function prop_access(input, path){
     }
     return input;
 }
+function inverser(mot) {
+    var motInverse = "";
+
+
+    for (var i = 0; i < mot.length; i++) {
+        motInverse = mot[i] + motInverse;
+    }
+
+    return motInverse;
+}
 
 
 console.log(ucFirst('test'));
 console.log(capitalize('test reussi'));
 console.log(camelCase('very well'));
-console.log(snake_case('very very s'));
+console.log(snake_case('very verygit '));
 console.log(snake_case(333));
 console.log(leet('leetspeak'));
 console.log(prop_access({
