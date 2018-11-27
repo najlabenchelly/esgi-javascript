@@ -46,9 +46,29 @@ function leet(string){
     }
     return data;
 }
+function prop_access(input, path){
+    var pathArray = path.split(".");
+    for(var i = 0; i < pathArray.length; i++){
+        if(input[pathArray[i]] === undefined){
+            console.error('path exist');
+            return null;
+        }
+        input = input[pathArray[i]];
+    }
+    return input;
+}
+
+
 console.log(ucFirst('test'));
 console.log(capitalize('test reussi'));
 console.log(camelCase('very well'));
 console.log(snake_case('very very s'));
 console.log(snake_case(333));
 console.log(leet('leetspeak'));
+console.log(prop_access({
+    "animal": {
+        "type": {
+            "name":"dog"
+        }
+    }
+}, "animal.type.name"));
